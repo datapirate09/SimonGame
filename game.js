@@ -59,7 +59,7 @@ function checkUserInputs(userSelect){
         if (userSelect === comp_generated_button[index])
             index++;
         else{
-            prev_level=level;
+            prev_level=Math.max(prev_level,level);
             playSound("wrong");
             $("body").addClass("game-over");
             setTimeout(function () {
@@ -78,8 +78,8 @@ function startOver(){
     comp_generated_button=[];
     level=0;
     game_Started=false;
-    prev_level-=1;
-    $("h2").text("Previous Best: "+prev_level);
+    var prev_fun_level=prev_level-1;
+    $("h2").text("Previous Best: "+prev_fun_level);
 }
 //now we should compare input from user
 
