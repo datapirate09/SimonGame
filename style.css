@@ -1,0 +1,55 @@
+body{
+    background-color: indigo;
+    padding: 0;
+}
+#main-heading{
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 5rem;
+    text-align: center;
+}
+.btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+#green{
+    background-color: green;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
+.two-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer{
+    text-align: center;
+    font-size: 2rem;
+    color: wheat;
+}
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+}
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+#sub-heading{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    
+}  
