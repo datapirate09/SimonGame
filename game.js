@@ -5,6 +5,9 @@ var level=0;
 var prev_level=1;
 var game_Started=false;
 var index=0;
+var no_of_time=0;
+if (no_of_time == 0)
+    $("h2").hide();
 function nextSequence(){
     //generate a random number
     level++;
@@ -46,6 +49,7 @@ function playSound(sound){
 //keypress detect at the beginning
 
 $(document).keypress(function(ev){
+    
     if (!game_Started){
         nextSequence();
         $("h1").text("Level "+level);
@@ -75,11 +79,13 @@ function checkUserInputs(userSelect){
     }
 }
 function startOver(){ 
+    $("h2").show();
     comp_generated_button=[];
     level=0;
     game_Started=false;
     var prev_fun_level=prev_level-1;
     $("h2").text("Previous Best: "+prev_fun_level);
+    
 }
 //now we should compare input from user
 
